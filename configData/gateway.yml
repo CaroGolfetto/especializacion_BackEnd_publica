@@ -13,15 +13,12 @@ spring:
         - id: movie-service
           uri: lb://api-movie
           predicates:
-            - Path=/movies/**
+            - Path=/api/v1/movies/**
         - id: catalog-service
           uri: lb://api-catalog
           predicates:
-            - Path=/catalog/**
-        #- id: mssmargins
-         # uri: lb://api-margins
-         # predicates:
-          #  - Path=/calculate/**
+            - Path=/api/v1/catalog/**
+
 
 info:
   app:
